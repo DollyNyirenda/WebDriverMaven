@@ -73,7 +73,7 @@ public class IndeedTestNGTest {
 		driver.get(baseUrl);
 		
 		Assert.assertTrue(driver.findElement(By.xpath("//img[@alt='Indeed job search']")).isDisplayed(), 
-				"ERROR: Home page logo is not displayed");
+				"ERROR: The Home page logo is not displayed");
 	}
 	
 	@AfterMethod
