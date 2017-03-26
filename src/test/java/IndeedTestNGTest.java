@@ -43,11 +43,10 @@ public class IndeedTestNGTest {
 	    return new Object[][] 
 	    		{
 			      new Object[] { "Selenium", "London" },
-			      //new Object[] { "Cucumber", "Glasgow" },
+			      new Object[] { "Cucumber", "GlasgowTest" },
 			      //new Object[] { "Testing", "Manchester" },
 	    		};
 	  }
-	
 	@Test(dataProvider = "getIndeedJobSearchParams")
 	public void testIndeedJobSearch(String keyword, String location)
 	{
@@ -72,7 +71,6 @@ public class IndeedTestNGTest {
 	public void testIndeedSiteHomePageLogo()
 	{
 		driver.get(baseUrl);
-		
 		
 		Assert.assertTrue(driver.findElement(By.xpath("//img[@alt='Indeed job search']")).isDisplayed(), 
 				"ERROR: Home page logo is not displayed");
